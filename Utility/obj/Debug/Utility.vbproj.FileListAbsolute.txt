@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.vbproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\QLTV\Utility\bin\Debug\Utility.exe
+C:\Users\Administrator\source\repos\QLTV\Utility\bin\Debug\Utility.pdb
+C:\Users\Administrator\source\repos\QLTV\Utility\bin\Debug\Utility.xml
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.exe
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.xml
+C:\Users\Administrator\source\repos\QLTV\Utility\obj\Debug\Utility.pdb

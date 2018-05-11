@@ -22,9 +22,62 @@ Partial Class Frm_Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.QuảnLíĐộcGiảToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ThêmLoạiĐộcGiảToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ThêmĐộcGiảToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLíĐộcGiảToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(900, 33)
+        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'QuảnLíĐộcGiảToolStripMenuItem
+        '
+        Me.QuảnLíĐộcGiảToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ThêmLoạiĐộcGiảToolStripMenuItem, Me.ThêmĐộcGiảToolStripMenuItem})
+        Me.QuảnLíĐộcGiảToolStripMenuItem.Name = "QuảnLíĐộcGiảToolStripMenuItem"
+        Me.QuảnLíĐộcGiảToolStripMenuItem.Size = New System.Drawing.Size(144, 29)
+        Me.QuảnLíĐộcGiảToolStripMenuItem.Text = "Quản lí độc giả"
+        '
+        'ThêmLoạiĐộcGiảToolStripMenuItem
+        '
+        Me.ThêmLoạiĐộcGiảToolStripMenuItem.Name = "ThêmLoạiĐộcGiảToolStripMenuItem"
+        Me.ThêmLoạiĐộcGiảToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ThêmLoạiĐộcGiảToolStripMenuItem.Text = "Thêm loại độc giả"
+        '
+        'ThêmĐộcGiảToolStripMenuItem
+        '
+        Me.ThêmĐộcGiảToolStripMenuItem.Name = "ThêmĐộcGiảToolStripMenuItem"
+        Me.ThêmĐộcGiảToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ThêmĐộcGiảToolStripMenuItem.Text = "Thêm độc giả"
+        '
+        'Frm_Main
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(900, 450)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.IsMdiContainer = True
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Name = "Frm_Main"
         Me.Text = "Frm_Main"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents QuảnLíĐộcGiảToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ThêmLoạiĐộcGiảToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ThêmĐộcGiảToolStripMenuItem As ToolStripMenuItem
 End Class
