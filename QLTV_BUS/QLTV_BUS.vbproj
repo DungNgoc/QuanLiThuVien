@@ -88,6 +88,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sach_BUS.vb" />
+    <Compile Include="TacGia_BUS.vb" />
+    <Compile Include="TheLoaiSach_BUS.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -107,6 +110,20 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV_DAL\QLTV_DAL.vbproj">
+      <Project>{1662b866-6339-4b86-a27f-b7b94ba29c8b}</Project>
+      <Name>QLTV_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.vbproj">
+      <Project>{62b9f6e4-15d9-4f61-b534-30473d749321}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.vbproj">
+      <Project>{5c674f35-83b8-42bb-b727-ac0b83858207}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
