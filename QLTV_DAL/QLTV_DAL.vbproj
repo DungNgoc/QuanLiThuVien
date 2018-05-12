@@ -90,6 +90,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sach_DAL.vb" />
+    <Compile Include="TacGia_DAL.vb" />
+    <Compile Include="TheLoaiSach_DAL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
