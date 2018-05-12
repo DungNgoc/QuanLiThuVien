@@ -23,10 +23,11 @@ Partial Class Frm_ThemLoaiDocGia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_MaloaiDocGia = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Txt_MaloaiDocGia = New System.Windows.Forms.TextBox()
+        Me.Txt_TenLoaiDocGia = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Bt_Nhap = New System.Windows.Forms.Button()
+        Me.Btn_Nhap = New System.Windows.Forms.Button()
+        Me.Btn_NhapVaDong = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -37,20 +38,20 @@ Partial Class Frm_ThemLoaiDocGia
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mã Loại Độc Giả"
         '
-        'txt_MaloaiDocGia
+        'Txt_MaloaiDocGia
         '
-        Me.txt_MaloaiDocGia.Location = New System.Drawing.Point(349, 44)
-        Me.txt_MaloaiDocGia.Name = "txt_MaloaiDocGia"
-        Me.txt_MaloaiDocGia.ReadOnly = True
-        Me.txt_MaloaiDocGia.Size = New System.Drawing.Size(220, 26)
-        Me.txt_MaloaiDocGia.TabIndex = 1
+        Me.Txt_MaloaiDocGia.Location = New System.Drawing.Point(349, 44)
+        Me.Txt_MaloaiDocGia.Name = "Txt_MaloaiDocGia"
+        Me.Txt_MaloaiDocGia.ReadOnly = True
+        Me.Txt_MaloaiDocGia.Size = New System.Drawing.Size(220, 26)
+        Me.Txt_MaloaiDocGia.TabIndex = 1
         '
-        'TextBox1
+        'Txt_TenLoaiDocGia
         '
-        Me.TextBox1.Location = New System.Drawing.Point(349, 85)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(220, 26)
-        Me.TextBox1.TabIndex = 3
+        Me.Txt_TenLoaiDocGia.Location = New System.Drawing.Point(349, 85)
+        Me.Txt_TenLoaiDocGia.Name = "Txt_TenLoaiDocGia"
+        Me.Txt_TenLoaiDocGia.Size = New System.Drawing.Size(220, 26)
+        Me.Txt_TenLoaiDocGia.TabIndex = 3
         '
         'Label2
         '
@@ -60,24 +61,34 @@ Partial Class Frm_ThemLoaiDocGia
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Tên Loại Độc Giả"
         '
-        'Bt_Nhap
+        'Btn_Nhap
         '
-        Me.Bt_Nhap.Location = New System.Drawing.Point(262, 169)
-        Me.Bt_Nhap.Name = "Bt_Nhap"
-        Me.Bt_Nhap.Size = New System.Drawing.Size(149, 45)
-        Me.Bt_Nhap.TabIndex = 4
-        Me.Bt_Nhap.Text = "Nhập"
-        Me.Bt_Nhap.UseVisualStyleBackColor = True
+        Me.Btn_Nhap.Location = New System.Drawing.Point(94, 169)
+        Me.Btn_Nhap.Name = "Btn_Nhap"
+        Me.Btn_Nhap.Size = New System.Drawing.Size(149, 45)
+        Me.Btn_Nhap.TabIndex = 4
+        Me.Btn_Nhap.Text = "Nhập"
+        Me.Btn_Nhap.UseVisualStyleBackColor = True
+        '
+        'Btn_NhapVaDong
+        '
+        Me.Btn_NhapVaDong.Location = New System.Drawing.Point(420, 169)
+        Me.Btn_NhapVaDong.Name = "Btn_NhapVaDong"
+        Me.Btn_NhapVaDong.Size = New System.Drawing.Size(149, 45)
+        Me.Btn_NhapVaDong.TabIndex = 5
+        Me.Btn_NhapVaDong.Text = "Nhập Và Đóng"
+        Me.Btn_NhapVaDong.UseVisualStyleBackColor = True
         '
         'Frm_ThemLoaiDocGia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(706, 226)
-        Me.Controls.Add(Me.Bt_Nhap)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Btn_NhapVaDong)
+        Me.Controls.Add(Me.Btn_Nhap)
+        Me.Controls.Add(Me.Txt_TenLoaiDocGia)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txt_MaloaiDocGia)
+        Me.Controls.Add(Me.Txt_MaloaiDocGia)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Frm_ThemLoaiDocGia"
         Me.ShowIcon = False
@@ -89,8 +100,9 @@ Partial Class Frm_ThemLoaiDocGia
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents txt_MaloaiDocGia As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Txt_MaloaiDocGia As TextBox
+    Friend WithEvents Txt_TenLoaiDocGia As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Bt_Nhap As Button
+    Friend WithEvents Btn_Nhap As Button
+    Friend WithEvents Btn_NhapVaDong As Button
 End Class

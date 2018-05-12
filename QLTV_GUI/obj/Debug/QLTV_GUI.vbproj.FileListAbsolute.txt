@@ -25,3 +25,5 @@ C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\Utility.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\QLTV_DAL.pdb
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\QLTV_DAL.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.vbproj.CopyComplete
+C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_QLDocGia.resources
+C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_QLLoaiDocGia.resources

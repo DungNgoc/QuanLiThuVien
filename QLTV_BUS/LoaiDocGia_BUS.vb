@@ -25,18 +25,18 @@ Public Class LoaiDocGia_BUS
         '2. insert to DB
         Return ldgDAL.insert(ldg)
     End Function
-    'Public Function update(lhs As LoaiHocSinhDTO) As Result
-    '    '1. verify data here!!
+    Public Function update(ldg As LoaiDocGia_DTO) As Result
+        '1. verify data here!!
 
-    '    '2. insert to DB
-    '    Return lhsDAL.update(lhs)
-    'End Function
-    'Public Function delete(maLoai As Integer) As Result
-    '    '1. verify data here!!
+        '2. insert to DB
+        Return ldgDAL.update(ldg)
+    End Function
+    Public Function delete(MaLoaiDocGia As Integer) As Result
+        '1. verify data here!!
 
-    '    '2. insert to DB
-    '    Return lhsDAL.delete(maLoai)
-    'End Function
+        '2. insert to DB
+        Return ldgDAL.delete(MaLoaiDocGia)
+    End Function
     Public Function selectAll(ByRef listLoaiDocGia As List(Of LoaiDocGia_DTO)) As Result
         '1. verify data here!!
 

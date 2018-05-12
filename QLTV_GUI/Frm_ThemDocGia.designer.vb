@@ -36,8 +36,8 @@ Partial Class Frm_ThemDocGia
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Dtp_NgaySinh = New System.Windows.Forms.DateTimePicker()
         Me.Dtp_NgayLap = New System.Windows.Forms.DateTimePicker()
-        Me.btn_Nhap = New System.Windows.Forms.Button()
-        Me.btn_NhapVaDong = New System.Windows.Forms.Button()
+        Me.Btn_Nhap = New System.Windows.Forms.Button()
+        Me.Btn_NhapVaDong = New System.Windows.Forms.Button()
         Me.dtp_NgayHetHan = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Txt_TinhTrangThe = New System.Windows.Forms.TextBox()
@@ -160,23 +160,23 @@ Partial Class Frm_ThemDocGia
         Me.Dtp_NgayLap.Size = New System.Drawing.Size(240, 26)
         Me.Dtp_NgayLap.TabIndex = 16
         '
-        'btn_Nhap
+        'Btn_Nhap
         '
-        Me.btn_Nhap.Location = New System.Drawing.Point(137, 540)
-        Me.btn_Nhap.Name = "btn_Nhap"
-        Me.btn_Nhap.Size = New System.Drawing.Size(159, 50)
-        Me.btn_Nhap.TabIndex = 17
-        Me.btn_Nhap.Text = "Nhập"
-        Me.btn_Nhap.UseVisualStyleBackColor = True
+        Me.Btn_Nhap.Location = New System.Drawing.Point(137, 540)
+        Me.Btn_Nhap.Name = "Btn_Nhap"
+        Me.Btn_Nhap.Size = New System.Drawing.Size(159, 50)
+        Me.Btn_Nhap.TabIndex = 17
+        Me.Btn_Nhap.Text = "Nhập"
+        Me.Btn_Nhap.UseVisualStyleBackColor = True
         '
-        'btn_NhapVaDong
+        'Btn_NhapVaDong
         '
-        Me.btn_NhapVaDong.Location = New System.Drawing.Point(515, 540)
-        Me.btn_NhapVaDong.Name = "btn_NhapVaDong"
-        Me.btn_NhapVaDong.Size = New System.Drawing.Size(170, 50)
-        Me.btn_NhapVaDong.TabIndex = 18
-        Me.btn_NhapVaDong.Text = "Nhập Và Đóng"
-        Me.btn_NhapVaDong.UseVisualStyleBackColor = True
+        Me.Btn_NhapVaDong.Location = New System.Drawing.Point(515, 540)
+        Me.Btn_NhapVaDong.Name = "Btn_NhapVaDong"
+        Me.Btn_NhapVaDong.Size = New System.Drawing.Size(170, 50)
+        Me.Btn_NhapVaDong.TabIndex = 18
+        Me.Btn_NhapVaDong.Text = "Nhập Và Đóng"
+        Me.Btn_NhapVaDong.UseVisualStyleBackColor = True
         '
         'dtp_NgayHetHan
         '
@@ -239,8 +239,8 @@ Partial Class Frm_ThemDocGia
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.dtp_NgayHetHan)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.btn_NhapVaDong)
-        Me.Controls.Add(Me.btn_Nhap)
+        Me.Controls.Add(Me.Btn_NhapVaDong)
+        Me.Controls.Add(Me.Btn_Nhap)
         Me.Controls.Add(Me.Dtp_NgayLap)
         Me.Controls.Add(Me.Dtp_NgaySinh)
         Me.Controls.Add(Me.Txt_MaDocGia)
@@ -277,8 +277,8 @@ Partial Class Frm_ThemDocGia
     Friend WithEvents Label7 As Label
     Friend WithEvents Dtp_NgaySinh As DateTimePicker
     Friend WithEvents Dtp_NgayLap As DateTimePicker
-    Friend WithEvents btn_Nhap As Button
-    Friend WithEvents btn_NhapVaDong As Button
+    Friend WithEvents Btn_Nhap As Button
+    Friend WithEvents Btn_NhapVaDong As Button
     Friend WithEvents dtp_NgayHetHan As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents Txt_TinhTrangThe As TextBox

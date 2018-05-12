@@ -88,36 +88,36 @@ Public Class LoaiDocGia_DAL
         Return New Result(True) ' thanh cong
     End Function
 
-    'Public Function update(ldg As LoaiDocGia_DTO) As Result
+    Public Function update(ldg As LoaiDocGia_DTO) As Result
 
-    '    Dim query As String = String.Empty
-    '    query &= " UPDATE [tblLoaiDocGia] SET"
-    '    query &= " [tenloaidocgia] = @tenloaidocgia "
-    '    query &= "WHERE "
-    '    query &= " [maloaidocgia] = @maloaidocgia "
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblLoaiDocGia] SET"
+        query &= " [tenloaidocgia] = @tenloaidocgia "
+        query &= "WHERE "
+        query &= " [maloaidocgia] = @maloaidocgia "
 
-    '    Using conn As New SqlConnection(connectionString)
-    '        Using comm As New SqlCommand()
-    '            With comm
-    '                .Connection = conn
-    '                .CommandType = CommandType.Text
-    '                .CommandText = query
-    '                .Parameters.AddWithValue("@maloaidocgia", ldg.MaLoaiDocGia)
-    '                .Parameters.AddWithValue("@tenloaidocgia", ldg.TenLoaiDocGia)
-    '            End With
-    '            Try
-    '                conn.Open()
-    '                comm.ExecuteNonQuery()
-    '            Catch ex As Exception
-    '                Console.WriteLine(ex.StackTrace)
-    '                conn.Close()
-    '                ' them that bai!!!
-    '                Return New Result(False, "Cập nhật Độc Gỉa không thành công", ex.StackTrace)
-    '            End Try
-    '        End Using
-    '    End Using
-    '    Return New Result(True) ' thanh cong
-    'End Function
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maloaidocgia", ldg.MaLoaiDocGia)
+                    .Parameters.AddWithValue("@tenloaidocgia", ldg.TenLoaiDocGia)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Cập nhật Độc Giả không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 
     Public Function selectALL(ByRef listLoaiDocGia As List(Of LoaiDocGia_DTO)) As Result
 
@@ -154,34 +154,34 @@ Public Class LoaiDocGia_DAL
         Return New Result(True) ' thanh cong
     End Function
 
-    'Public Function delete(maLoai As Integer) As Result
+    Public Function delete(MaLoaiDocGia As Integer) As Result
 
-    '        Dim query As String = String.Empty
-    '        query &= " DELETE FROM [tblLoaiHocSinh] "
-    '        query &= " WHERE "
-    '        query &= " [maloaihocsinh] = @maloaihocsinh "
+        Dim query As String = String.Empty
+        query &= " DELETE FROM [tblLoaiDocGia] "
+        query &= " WHERE "
+        query &= " [maloaidocgia] = @maloaidocgia "
 
-    '        Using conn As New SqlConnection(connectionString)
-    '            Using comm As New SqlCommand()
-    '                With comm
-    '                    .Connection = conn
-    '                    .CommandType = CommandType.Text
-    '                    .CommandText = query
-    '                    .Parameters.AddWithValue("@maloaihocsinh", maLoai)
-    '                End With
-    '                Try
-    '                    conn.Open()
-    '                    comm.ExecuteNonQuery()
-    '                Catch ex As Exception
-    '                    Console.WriteLine(ex.StackTrace)
-    '                    conn.Close()
-    '                    ' them that bai!!!
-    '                    Return New Result(False, "Xóa học sinh không thành công", ex.StackTrace)
-    '                End Try
-    '            End Using
-    '        End Using
-    '        Return New Result(True) ' thanh cong
-    '    End Function
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maloaidocgia", MaLoaiDocGia)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Xóa độc giả không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class
 
 

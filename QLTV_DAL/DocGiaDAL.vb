@@ -76,7 +76,7 @@ Public Class DocGiaDAL
     Public Function insert(dg As DocGiaDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblDocGia] ([madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi],[email],[ngaylap])"
+        query &= "INSERT INTO [tblDocGia] ([madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi],[email],[ngaylap],ngayla)"
         query &= "VALUES (@madocgia,@hovaten,@maloaidocgia,@ngaysinh,@diachi,@email, @ngaylap)"
 
         'get MaDocGia
@@ -132,7 +132,7 @@ Public Class DocGiaDAL
                     If reader.HasRows = True Then
                         listDocGia.Clear()
                         While reader.Read()
-                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap")))
+                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap"))) ', reader("ngayhethan"), reader("tinhtrangthe"), reader("sosachdamuon")))
                         End While
                     End If
 

@@ -17,27 +17,51 @@ Public Class DocGiaBUS
         If (dg.HoVaTen.Length < 1) Then
             Return False
         End If
-
         Return True
     End Function
+
+    Public Function isValidAge(dg As DocGiaDTO) As Boolean
+        Dim NamHienTai = DateTime.Now.Year
+        If ((NamHienTai - dg.NgaySinh.Year) < 18 Or (NamHienTai - dg.NgaySinh.Year) > 55) Then
+            Return False
+        End If
+        Return True
+    End Function
+
+    'Public Function Subtract(value As TimeSpan) As Date
+
+    'End Function
+
+    'Public Function TinhTrangThe(dg As DocGiaDTO) As Boolean
+    '    Dim NgayHienTai = DateTime.Now
+    '    'Dim ThangHienTai = DateTime.Now.Month
+    '    ' Dim NamHienTai = DateTime.Now.Year
+    '    Dim x As System.TimeSpan
+    '    x = NgayHienTai.Subtract(dg.NgayLap)
+    '    If (x.Days > 180) Then
+    '        Return False
+    '    End If
+    '    Return True
+
+    'End Function
     Public Function insert(dg As DocGiaDTO) As Result
         '1. verify data here!!
 
         '2. insert to DB
         Return dgDAL.insert(dg)
     End Function
-    'Public Function update(dg As DocGiaDTO) As Result
-    '    '1. verify data here!!
+    Public Function update(dg As DocGiaDTO) As Result
+        '1. verify data here!!
 
-    '    '2. insert to DB
-    '    Return dgDAL.update(dg)
-    'End Function
-    'Public Function delete(MaLoai As Integer) As Result
-    '    '1. verify data here!!
+        '2. insert to DB
+        Return dgDAL.update(dg)
+    End Function
+    Public Function delete(MaLoaiDocGia As Integer) As Result
+        '1. verify data here!!
 
-    '    '2. insert to DB
-    '    Return dgDAL.delete(MaLoai)
-    'End Function
+        '2. insert to DB
+        Return dgDAL.delete(MaLoaiDocGia)
+    End Function
     Public Function selectAll(ByRef listLoaiDocGia As List(Of DocGiaDTO)) As Result
         '1. verify data here!!
 

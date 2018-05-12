@@ -7,7 +7,7 @@ Public Class Frm_ThemDocGia
     Private dgBus As DocGiaBUS
     Private ldgBus As LoaiDocGia_BUS
 
-    Private Sub btn_Nhap_Click(sender As Object, e As EventArgs) Handles btn_Nhap.Click
+    Private Sub Btn_Nhap_Click(sender As Object, e As EventArgs) Handles Btn_Nhap.Click
 
         Dim docgia As DocGiaDTO
         docgia = New DocGiaDTO()
@@ -20,6 +20,15 @@ Public Class Frm_ThemDocGia
         docgia.DiaChi = Txt_DiaChi.Text
         docgia.Email = Txt_Email.Text
         docgia.NgayLap = Dtp_NgayLap.Value
+        docgia.NgayHetHan = dtp_NgayHetHan.Value
+        Dim x = Dtp_NgayLap.Value.Month + 6
+        'If (x > 12) Then
+        '    x = x - 12
+        '    dtp_NgayHetHan
+        '    docgia
+
+
+        'End If
 
 
         '2. Business .....
@@ -27,6 +36,18 @@ Public Class Frm_ThemDocGia
             MessageBox.Show("Họ tên độc giả không đúng")
             Txt_HoVaTen.Focus()
             Return
+        End If
+
+        If (dgBus.isValidAge(docgia) = False) Then
+            MessageBox.Show("Tuổi Độc Giả không hợp lệ")
+            Dtp_NgaySinh.Focus()
+            Return
+        End If
+
+        If (dgBus.isValidAge(docgia) = False) Then
+            Txt_TinhTrangThe.Text = "Hết hạn"
+            Return
+            Txt_TinhTrangThe.Text = "Còn Hạn"
         End If
         '3. Insert to DB
         Dim result As Result
@@ -46,7 +67,7 @@ Public Class Frm_ThemDocGia
             Txt_HoVaTen.Text = String.Empty
 
         Else
-            MessageBox.Show("Thêm Độc Gia không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Thêm Độc Giả không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
 
@@ -83,7 +104,7 @@ Public Class Frm_ThemDocGia
         Txt_MaDocGia.Text = nextMaDocGia
 
     End Sub
-    Private Sub btn_NhapVaDong_Click(sender As Object, e As EventArgs) Handles btn_NhapVaDong.Click
+    Private Sub Btn_NhapVaDong_Click(sender As Object, e As EventArgs) Handles Btn_NhapVaDong.Click
         Dim docgia As DocGiaDTO
         docgia = New DocGiaDTO()
 
@@ -104,6 +125,12 @@ Public Class Frm_ThemDocGia
             Txt_HoVaTen.Focus()
             Return
         End If
+
+        If (dgBus.isValidAge(docgia) = False) Then
+            MessageBox.Show("Tuổi Độc Giả không hợp lệ")
+            Dtp_NgaySinh.Focus()
+            Return
+        End If
         '3. Insert to DB
         Dim result As Result
         result = dgBus.insert(docgia)
@@ -116,6 +143,7 @@ Public Class Frm_ThemDocGia
         End If
     End Sub
 
+    Private Sub Txt_HoVaTen_TextChanged(sender As Object, e As EventArgs) Handles Txt_HoVaTen.TextChanged
 
-
+    End Sub
 End Class
