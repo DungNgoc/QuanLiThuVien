@@ -15,7 +15,7 @@ Public Class DocGiaDAL
         Me.connectionString = ConnectionString
     End Sub
 
-    Public Function buildMaDocGia(ByRef nextMaDocGia As String) As Result 'ex: 18222229
+    Public Function BuildMaDocGia(ByRef nextMaDocGia As String) As Result 'ex: 18222229
         nextMaDocGia = String.Empty
         Dim y = DateTime.Now.Year
         Dim x = y.ToString().Substring(2)
@@ -73,15 +73,15 @@ Public Class DocGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function insert(dg As DocGiaDTO) As Result
+    Public Function Insert(dg As DocGiaDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblDocGia] ([madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi],[email],[ngaylap],ngayla)"
-        query &= "VALUES (@madocgia,@hovaten,@maloaidocgia,@ngaysinh,@diachi,@email, @ngaylap)"
+        query &= "INSERT INTO [tblDocGia] ([madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi],[email],[ngaylap],[ngayhethan],[tinhtrangthe],[sosachdamuon])"
+        query &= "VALUES (@madocgia,@hovaten,@maloaidocgia,@ngaysinh,@diachi,@email, @ngaylap, @ngayhethan, @tinhtrangthe, @sosachdamuon)"
 
         'get MaDocGia
         Dim nextMaDocGia = "1"
-        buildMaDocGia(nextMaDocGia)
+        BuildMaDocGia(nextMaDocGia)
         dg.MaDocGia = nextMaDocGia
 
         Using conn As New SqlConnection(connectionString)
@@ -97,6 +97,9 @@ Public Class DocGiaDAL
                     .Parameters.AddWithValue("@diachi", dg.DiaChi)
                     .Parameters.AddWithValue("@email", dg.Email)
                     .Parameters.AddWithValue("@ngaylap", dg.NgayLap)
+                    .Parameters.AddWithValue("@ngayhethan", dg.NgayHetHan)
+                    .Parameters.AddWithValue("@tinhtrangthe", dg.TinhTrangThe)
+                    .Parameters.AddWithValue("@sosachdamuon", dg.SoSachDaMuon)
                 End With
                 Try
                     conn.Open()
@@ -111,10 +114,10 @@ Public Class DocGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function selectALL(ByRef listDocGia As List(Of DocGiaDTO)) As Result
+    Public Function SelectALL(ByRef listDocGia As List(Of DocGiaDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT [madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi], [email], [ngaylap]"
+        query &= "SELECT [madocgia], [hovaten], [maloaidocgia], [ngaysinh], [diachi], [email], [ngaylap],[ngayhethan],[tinhtrangthe],[sosachdamuon]"
         query &= "FROM [tblDocGia]"
 
 
@@ -132,7 +135,7 @@ Public Class DocGiaDAL
                     If reader.HasRows = True Then
                         listDocGia.Clear()
                         While reader.Read()
-                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap"))) ', reader("ngayhethan"), reader("tinhtrangthe"), reader("sosachdamuon")))
+                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap"), reader("ngayhethan"), reader("tinhtrangthe"), reader("sosachdamuon")))
                         End While
                     End If
 
@@ -146,10 +149,10 @@ Public Class DocGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function selectALL_ByType(MaLoaiDocGia As Integer, ByRef listDocGia As List(Of DocGiaDTO)) As Result
+    Public Function SelectALL_ByType(MaLoaiDocGia As Integer, ByRef listDocGia As List(Of DocGiaDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT [madocgia], [hovaten],[maloaidocgia], [ngaysinh], [diachi], [email], [ngaylap] "
+        query &= "SELECT [madocgia], [hovaten],[maloaidocgia], [ngaysinh], [diachi], [email], [ngaylap],[ngayhethan],[tinhtrangthe],[sosachdamuon] "
         query &= "FROM [tblDocGia] "
         query &= "WHERE [maloaidocgia] = @maloaidocgia "
 
@@ -168,7 +171,7 @@ Public Class DocGiaDAL
                     If reader.HasRows = True Then
                         listDocGia.Clear()
                         While reader.Read()
-                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap")))
+                            listDocGia.Add(New DocGiaDTO(reader("madocgia"), reader("hovaten"), reader("maloaidocgia"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("ngaylap"), reader("ngayhethan"), reader("tinhtrangthe"), reader("sosachdamuon")))
                         End While
                     End If
 
@@ -182,7 +185,7 @@ Public Class DocGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function update(dg As DocGiaDTO) As Result
+    Public Function Update(dg As DocGiaDTO) As Result
 
         Dim query As String = String.Empty
         query &= " UPDATE [tblDocGia] SET"
@@ -192,6 +195,10 @@ Public Class DocGiaDAL
         query &= " ,[diachi] = @diachi "
         query &= " ,[email] = @email "
         query &= " ,[ngaylap] = @ngaylap "
+        query &= " ,[ngayhethan]=@ngayhethan"
+        query &= " ,[tinhtrangthe]=@tinhtrangthe"
+        query &= " ,[sosachdamuon]=@sosachdamuon"
+
         query &= " WHERE "
         query &= " [madocgia] = @madocgia "
 
@@ -208,6 +215,9 @@ Public Class DocGiaDAL
                     .Parameters.AddWithValue("@email", dg.Email)
                     .Parameters.AddWithValue("@ngaylap", dg.NgayLap)
                     .Parameters.AddWithValue("@madocgia", dg.MaDocGia)
+                    .Parameters.AddWithValue("@ngayhethan", dg.NgayHetHan)
+                    .Parameters.AddWithValue("@tinhtrangthe", dg.TinhTrangThe)
+                    .Parameters.AddWithValue("@sosachdamuon", dg.SoSachDaMuon)
                 End With
                 Try
                     conn.Open()
@@ -223,7 +233,7 @@ Public Class DocGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function delete(MaDocGia As String) As Result
+    Public Function Delete(MaDocGia As String) As Result
 
         Dim query As String = String.Empty
         query &= " DELETE FROM [tblDocGia] "

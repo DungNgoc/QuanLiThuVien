@@ -13,7 +13,7 @@
 
     End Sub
 
-    Public Sub New(strMaDocGia As String, strHoVaTen As String, iLoaiDocGia As Integer, dateNgaySinh As DateTime, strDiaChi As String, strEmail As String, dateNgayLap As DateTime) ', dateNgayHetHan As DateTime, strTinhTrangThe As String, iSoSachDaMuon As Integer)
+    Public Sub New(strMaDocGia As String, strHoVaTen As String, iLoaiDocGia As Integer, dateNgaySinh As DateTime, strDiaChi As String, strEmail As String, dateNgayLap As DateTime, dateNgayHetHan As DateTime, strTinhTrangThe As String, iSoSachDaMuon As Integer)
         Me.strMaDocGia = strMaDocGia
         Me.strHoVaTen = strHoVaTen
         Me.iLoaiDocGia = iLoaiDocGia
@@ -21,9 +21,9 @@
         Me.strDiaChi = strDiaChi
         Me.strEmail = strEmail
         Me.dateNgayLap = dateNgayLap
-        'Me.dateNgayHetHan = dateNgayHetHan
-        'Me.strTinhTrangThe = strTinhTrangThe
-        'Me.iSoSachDaMuon = iSoSachDaMuon
+        Me.dateNgayHetHan = dateNgayHetHan
+        Me.strTinhTrangThe = strTinhTrangThe
+        Me.iSoSachDaMuon = iSoSachDaMuon
     End Sub
 
     Property MaDocGia() As String

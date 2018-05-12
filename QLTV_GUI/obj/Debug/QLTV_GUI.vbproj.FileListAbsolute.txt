@@ -25,36 +25,5 @@ C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\Utility.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\QLTV_DAL.pdb
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\bin\Debug\QLTV_DAL.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.vbproj.CopyComplete
-<<<<<<< HEAD
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_QLDocGia.resources
 C:\Users\Administrator\source\repos\QLTV\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_QLLoaiDocGia.resources
-=======
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_GUI.exe.config
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.vbprojResolveAssemblyReference.cache
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_Main.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_ThemTacGia.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_ThemTheLoaiSach.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_ThemDocGia.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_ThemLoaiDocGia.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Resources.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.Frm_ThemSach.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.vbproj.GenerateResource.Cache
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_GUI.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_GUI.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_GUI.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_BUS.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DTO.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\Utility.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DAL.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_BUS.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_BUS.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DTO.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DTO.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\Utility.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\Utility.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DAL.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_GUI\bin\Debug\QLTV_DAL.xml
->>>>>>> e2a08baed12e99d33e0bfa4d578e24c01f0d166d

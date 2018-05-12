@@ -78,7 +78,6 @@
     <Compile Include="Frm_Main.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Frm_QLDocGia.Designer.vb">
       <DependentUpon>Frm_QLDocGia.vb</DependentUpon>
     </Compile>
@@ -91,20 +90,6 @@
     <Compile Include="Frm_QLLoaiDocGia.vb">
       <SubType>Form</SubType>
     </Compile>
-=======
-    <Compile Include="Frm_ThemTacGia.Designer.vb">
-      <DependentUpon>Frm_ThemTacGia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_ThemTacGia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_ThemTheLoaiSach.Designer.vb">
-      <DependentUpon>Frm_ThemTheLoaiSach.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_ThemTheLoaiSach.vb">
-      <SubType>Form</SubType>
-     </Compile>
->>>>>>> e2a08baed12e99d33e0bfa4d578e24c01f0d166d
     <Compile Include="Frm_ThemDocGia.designer.vb">
       <DependentUpon>Frm_ThemDocGia.vb</DependentUpon>
     </Compile>
@@ -132,32 +117,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Frm_ThemSach.Designer.vb">
-      <DependentUpon>Frm_ThemSach.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_ThemSach.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Frm_Main.resx">
       <DependentUpon>Frm_Main.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Frm_QLDocGia.resx">
       <DependentUpon>Frm_QLDocGia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_QLLoaiDocGia.resx">
       <DependentUpon>Frm_QLLoaiDocGia.vb</DependentUpon>
     </EmbeddedResource>
-=======
-    <EmbeddedResource Include="Frm_ThemTacGia.resx">
-      <DependentUpon>Frm_ThemTacGia.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ThemTheLoaiSach.resx">
-      <DependentUpon>Frm_ThemTheLoaiSach.vb</DependentUpon>
-      </EmbeddedResource>
->>>>>>> e2a08baed12e99d33e0bfa4d578e24c01f0d166d
     <EmbeddedResource Include="Frm_ThemDocGia.resx">
       <DependentUpon>Frm_ThemDocGia.vb</DependentUpon>
     </EmbeddedResource>
@@ -169,9 +139,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ThemSach.resx">
-      <DependentUpon>Frm_ThemSach.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -185,21 +152,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config">
+      <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.vbproj">
-      <Project>{49747be3-427e-4505-982f-0633c19a2c00}</Project>
-      <Name>QLTV_BUS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.vbproj">
-      <Project>{62b9f6e4-15d9-4f61-b534-30473d749321}</Project>
-      <Name>QLTV_DTO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utility\Utility.vbproj">
-      <Project>{5c674f35-83b8-42bb-b727-ac0b83858207}</Project>
-      <Name>Utility</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.vbproj">

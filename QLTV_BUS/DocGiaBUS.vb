@@ -28,22 +28,15 @@ Public Class DocGiaBUS
         Return True
     End Function
 
-    'Public Function Subtract(value As TimeSpan) As Date
 
-    'End Function
 
-    'Public Function TinhTrangThe(dg As DocGiaDTO) As Boolean
-    '    Dim NgayHienTai = DateTime.Now
-    '    'Dim ThangHienTai = DateTime.Now.Month
-    '    ' Dim NamHienTai = DateTime.Now.Year
-    '    Dim x As System.TimeSpan
-    '    x = NgayHienTai.Subtract(dg.NgayLap)
-    '    If (x.Days > 180) Then
-    '        Return False
-    '    End If
-    '    Return True
-
-    'End Function
+    Public Function TinhNgayHetHan(dg As DocGiaDTO) As Boolean
+        Dim ThoiGian = DateTime.Now
+        If (dg.NgayLap.AddMonths(6) > ThoiGian) Then
+            Return False
+        End If
+        Return True
+    End Function
     Public Function insert(dg As DocGiaDTO) As Result
         '1. verify data here!!
 

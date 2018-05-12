@@ -8,12 +8,3 @@ C:\Users\Administrator\source\repos\QLTV\QLTV_DTO\bin\Debug\QLTV_DTO.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_DTO\obj\Debug\QLTV_DTO.exe
 C:\Users\Administrator\source\repos\QLTV\QLTV_DTO\obj\Debug\QLTV_DTO.xml
 C:\Users\Administrator\source\repos\QLTV\QLTV_DTO\obj\Debug\QLTV_DTO.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\bin\Debug\QLTV_DTO.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\bin\Debug\QLTV_DTO.pdb
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\bin\Debug\QLTV_DTO.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.vbprojResolveAssemblyReference.cache
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.Resources.resources
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.vbproj.GenerateResource.Cache
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.exe
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.xml
-C:\Users\ASUS\Desktop\Git2\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.pdb
