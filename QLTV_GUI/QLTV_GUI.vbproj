@@ -89,6 +89,18 @@
     </Compile>
     <Compile Include="Frm_ThemTheLoaiSach.vb">
       <SubType>Form</SubType>
+     </Compile>
+    <Compile Include="Frm_ThemDocGia.designer.vb">
+      <DependentUpon>Frm_ThemDocGia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ThemDocGia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ThemLoaiDocGia.Designer.vb">
+      <DependentUpon>Frm_ThemLoaiDocGia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ThemLoaiDocGia.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ThemTheLoaiSach.resx">
       <DependentUpon>Frm_ThemTheLoaiSach.vb</DependentUpon>
+      </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThemDocGia.resx">
+      <DependentUpon>Frm_ThemDocGia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThemLoaiDocGia.resx">
+      <DependentUpon>Frm_ThemLoaiDocGia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -142,7 +160,22 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.vbproj">
+      <Project>{49747be3-427e-4505-982f-0633c19a2c00}</Project>
+      <Name>QLTV_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.vbproj">
+      <Project>{62b9f6e4-15d9-4f61-b534-30473d749321}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.vbproj">
+      <Project>{5c674f35-83b8-42bb-b727-ac0b83858207}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.vbproj">

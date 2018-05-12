@@ -5,10 +5,10 @@
     Public Sub New()
     End Sub
     Public Sub New(iMaTheLoai As Integer, strTenTheLoai As String)
-        iMaTheLoai = iMaTheLoai
-        strTenTheLoai = strTenTheLoai
+        Me.iMaTheLoai = iMaTheLoai
+        Me.strTenTheLoai = strTenTheLoai
     End Sub
-    Property MaTheLoai() As Integer
+    Property MaTheLoaiSach() As Integer
         Get
             Return iMaTheLoai
         End Get
@@ -16,7 +16,7 @@
             iMaTheLoai = Value
         End Set
     End Property
-    Property TenTheLoai() As String
+    Property TenTheLoaiSach() As String
         Get
             Return strTenTheLoai
         End Get

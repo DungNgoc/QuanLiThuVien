@@ -5,8 +5,8 @@
     Public Sub New()
     End Sub
     Public Sub New(iMaTacGia As Integer, strTenTacGia As String)
-        iMaTacGia = iMaTacGia
-        strTenTacGia = strTenTacGia
+        Me.iMaTacGia = iMaTacGia
+        Me.strTenTacGia = strTenTacGia
     End Sub
     Property MaTacGia() As Integer
         Get

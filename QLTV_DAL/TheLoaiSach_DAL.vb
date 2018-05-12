@@ -16,9 +16,9 @@ Public Class TheLoaiSach_DAL
     Public Function getNextID(ByRef nextID As Integer) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT TOP 1 [MaTheLoai] "
+        query &= "SELECT TOP 1 [MaTheLoaiSach] "
         query &= "FROM [tblTheLoaiSach] "
-        query &= "ORDER BY [MaTheLoai] DESC "
+        query &= "ORDER BY [MaTheLoaiSach] DESC "
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
@@ -35,7 +35,7 @@ Public Class TheLoaiSach_DAL
                     idOnDB = Nothing
                     If reader.HasRows = True Then
                         While reader.Read()
-                            idOnDB = reader("MaTheLoai")
+                            idOnDB = reader("MaTheLoaiSach")
                         End While
                     End If
                     ' new ID = current ID + 1
@@ -53,8 +53,8 @@ Public Class TheLoaiSach_DAL
     Public Function insert(TheLoaiSach As TheLoaiSach_DTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblTheLoaiSach] ([MaTheLoai], [TenTheLoai])"
-        query &= "VALUES (@MaTheLoai,@TenTheLoai)"
+        query &= "INSERT INTO [tblTheLoaiSach] ([MaTheLoaiSach], [TenTheLoaiSach])"
+        query &= "VALUES (@MaTheLoaiSach,@TenTheLoaiSach)"
 
         Dim nextID = 0
         Dim result As Result
@@ -62,7 +62,7 @@ Public Class TheLoaiSach_DAL
         If (result.FlagResult = False) Then
             Return result
         End If
-        TheLoaiSach.MaTheLoai = nextID
+        TheLoaiSach.MaTheLoaiSach = nextID
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
@@ -70,8 +70,8 @@ Public Class TheLoaiSach_DAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@MaTheLoai", TheLoaiSach.MaTheLoai)
-                    .Parameters.AddWithValue("@TenTheLoai", TheLoaiSach.TenTheLoai)
+                    .Parameters.AddWithValue("@MaTheLoaiSach", TheLoaiSach.MaTheLoaiSach)
+                    .Parameters.AddWithValue("@TenTheLoaiSach", TheLoaiSach.TenTheLoaiSach)
                 End With
                 Try
                     conn.Open()
@@ -120,7 +120,7 @@ Public Class TheLoaiSach_DAL
     Public Function selectALL(ByRef listTheloaiSach As List(Of TheLoaiSach_DTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [MaTheLoai], [TenTheLoai]"
+        query &= " SELECT [MaTheLoaiSach], [TenTheLoaiSach]"
         query &= " FROM [tblTheLoaiSach]"
 
 
@@ -138,7 +138,7 @@ Public Class TheLoaiSach_DAL
                     If reader.HasRows = True Then
                         listTheloaiSach.Clear()
                         While reader.Read()
-                            listTheloaiSach.Add(New TheLoaiSach_DTO(reader("MaTheLoai"), reader("TenTheLoai")))
+                            listTheloaiSach.Add(New TheLoaiSach_DTO(reader("MaTheLoaiSach"), reader("TenTheLoaiSach")))
                         End While
                     End If
                 Catch ex As Exception

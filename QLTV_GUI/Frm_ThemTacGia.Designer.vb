@@ -26,8 +26,8 @@ Partial Class Frm_ThemTacGia
         Me.Txt_MaTacGia = New System.Windows.Forms.TextBox()
         Me.TxtTenTacGia = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BtnNhap = New System.Windows.Forms.Button()
-        Me.BtnNhapVaDong = New System.Windows.Forms.Button()
+        Me.Btn_Nhap = New System.Windows.Forms.Button()
+        Me.Btn_NhapVaDong = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -43,6 +43,7 @@ Partial Class Frm_ThemTacGia
         '
         Me.Txt_MaTacGia.Location = New System.Drawing.Point(145, 61)
         Me.Txt_MaTacGia.Name = "Txt_MaTacGia"
+        Me.Txt_MaTacGia.ReadOnly = True
         Me.Txt_MaTacGia.Size = New System.Drawing.Size(192, 22)
         Me.Txt_MaTacGia.TabIndex = 1
         '
@@ -62,36 +63,37 @@ Partial Class Frm_ThemTacGia
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Tên Tác Giả"
         '
-        'BtnNhap
+        'Btn_Nhap
         '
-        Me.BtnNhap.Location = New System.Drawing.Point(41, 153)
-        Me.BtnNhap.Name = "BtnNhap"
-        Me.BtnNhap.Size = New System.Drawing.Size(78, 52)
-        Me.BtnNhap.TabIndex = 4
-        Me.BtnNhap.Text = "Nhập"
-        Me.BtnNhap.UseVisualStyleBackColor = True
+        Me.Btn_Nhap.Location = New System.Drawing.Point(41, 153)
+        Me.Btn_Nhap.Name = "Btn_Nhap"
+        Me.Btn_Nhap.Size = New System.Drawing.Size(78, 52)
+        Me.Btn_Nhap.TabIndex = 4
+        Me.Btn_Nhap.Text = "Nhập"
+        Me.Btn_Nhap.UseVisualStyleBackColor = True
         '
-        'BtnNhapVaDong
+        'Btn_NhapVaDong
         '
-        Me.BtnNhapVaDong.Location = New System.Drawing.Point(226, 153)
-        Me.BtnNhapVaDong.Name = "BtnNhapVaDong"
-        Me.BtnNhapVaDong.Size = New System.Drawing.Size(111, 52)
-        Me.BtnNhapVaDong.TabIndex = 5
-        Me.BtnNhapVaDong.Text = "Nhập Và Đóng"
-        Me.BtnNhapVaDong.UseVisualStyleBackColor = True
+        Me.Btn_NhapVaDong.Location = New System.Drawing.Point(226, 153)
+        Me.Btn_NhapVaDong.Name = "Btn_NhapVaDong"
+        Me.Btn_NhapVaDong.Size = New System.Drawing.Size(111, 52)
+        Me.Btn_NhapVaDong.TabIndex = 5
+        Me.Btn_NhapVaDong.Text = "Nhập Và Đóng"
+        Me.Btn_NhapVaDong.UseVisualStyleBackColor = True
         '
         'Frm_ThemTacGia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(406, 275)
-        Me.Controls.Add(Me.BtnNhapVaDong)
-        Me.Controls.Add(Me.BtnNhap)
+        Me.Controls.Add(Me.Btn_NhapVaDong)
+        Me.Controls.Add(Me.Btn_Nhap)
         Me.Controls.Add(Me.TxtTenTacGia)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Txt_MaTacGia)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Frm_ThemTacGia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Thêm Tác Giả"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -102,6 +104,6 @@ Partial Class Frm_ThemTacGia
     Friend WithEvents Txt_MaTacGia As TextBox
     Friend WithEvents TxtTenTacGia As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents BtnNhap As Button
-    Friend WithEvents BtnNhapVaDong As Button
+    Friend WithEvents Btn_Nhap As Button
+    Friend WithEvents Btn_NhapVaDong As Button
 End Class

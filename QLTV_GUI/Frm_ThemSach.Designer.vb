@@ -216,6 +216,7 @@ Partial Class Frm_ThemSach
         Me.Controls.Add(Me.Txt_MaSach)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Frm_ThemSach"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Thêm Sách"
         Me.ResumeLayout(False)
         Me.PerformLayout()

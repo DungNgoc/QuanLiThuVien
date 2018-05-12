@@ -43,6 +43,7 @@ Partial Class Frm_ThemTheLoaiSach
         '
         Me.Txt_MaTheLoaiSach.Location = New System.Drawing.Point(215, 111)
         Me.Txt_MaTheLoaiSach.Name = "Txt_MaTheLoaiSach"
+        Me.Txt_MaTheLoaiSach.ReadOnly = True
         Me.Txt_MaTheLoaiSach.Size = New System.Drawing.Size(219, 22)
         Me.Txt_MaTheLoaiSach.TabIndex = 1
         '
@@ -92,6 +93,7 @@ Partial Class Frm_ThemTheLoaiSach
         Me.Controls.Add(Me.Txt_MaTheLoaiSach)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Frm_ThemTheLoaiSach"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Thêm Thể Loại Sách"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -62,7 +62,7 @@ Public Class TacGia_DAL
     Public Function insert(TacGia As TacGia_DTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblSach] ([MaTacGia], [TenTacGia])"
+        query &= "INSERT INTO [tblTacGia] ([MaTacGia], [TenTacGia])"
         query &= "VALUES (@MaTacGia,@TenTacGia)"
 
         'get MSHS
@@ -95,8 +95,8 @@ Public Class TacGia_DAL
     Public Function selectALL(ByRef listTacGia As List(Of TacGia_DTO)) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT ([MaTacGia], [TenTacGia])"
-        query &= "FROM [tblTacGIa]"
+        query &= " SELECT [MaTacGia], [TenTacGia]"
+        query &= " FROM [tblTacGia]"
 
 
         Using conn As New SqlConnection(connectionString)
@@ -116,11 +116,11 @@ Public Class TacGia_DAL
                             listTacGia.Add(New TacGia_DTO(reader("MaTacGia"), reader("TenTacGia")))
                         End While
                     End If
-
                 Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
                     conn.Close()
-                    System.Console.WriteLine(ex.StackTrace)
-                    Return New Result(False, "Lấy tất cả Tác giả không thành công", ex.StackTrace)
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả tác giả không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using

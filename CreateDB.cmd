@@ -1,0 +1,1 @@
+SQLCMD -S ASUS-PC -E -i CreateDB.sql

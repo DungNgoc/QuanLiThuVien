@@ -2,9 +2,9 @@
     Private strMaSach As String
     Private strTenSach As String
     Private iTheLoai As Integer
-    Private strMaTacGia As String
+    Private iMaTacGia As Integer
     Private strTenTacGia As String
-    Private strNamXuatBan As String
+    Private iNamXuatBan As Integer
     Private strNhaXuatBan As String
     Private dateNgayNhap As DateTime
     Private strTriGia As String
@@ -16,9 +16,8 @@
     Public Sub New(strMaSach As String,
                    strTenSach As String,
                    iTheLoai As Integer,
-                   strMaTacGia As String,
-                   strTenTacGia As String,
-                   strNamXuatBan As String,
+                   iMaTacGia As Integer,
+                   iNamXuatBan As Integer,
                    strNhaXuatBan As String,
                    dateNgayNhap As DateTime,
                    strTriGia As String)
@@ -27,9 +26,9 @@
         Me.strMaSach = strMaSach
         Me.strTenSach = strTenSach
         Me.iTheLoai = iTheLoai
-        Me.strMaTacGia = strMaTacGia
-        Me.strTenTacGia = strTenTacGia
-        Me.strNamXuatBan = strNamXuatBan
+        ' Me.strMaTacGia = strMaTacGia
+        Me.iMaTacGia = iMaTacGia
+        Me.iNamXuatBan = iNamXuatBan
         Me.strNhaXuatBan = strNhaXuatBan
         Me.dateNgayNhap = dateNgayNhap
         Me.strTriGia = strTriGia
@@ -59,28 +58,28 @@
             iTheLoai = value
         End Set
     End Property
+    'Property TenTacGia() As String
+    '    Get
+    '        Return strTenTacGia
+    '    End Get
+    '    Set(ByVal value As String)
+    '        strTenTacGia = value
+    '    End Set
+    'End Property
     Property TenTacGia() As String
         Get
-            Return strTenTacGia
+            Return iMaTacGia
         End Get
         Set(ByVal value As String)
-            strTenTacGia = value
+            iMaTacGia = value
         End Set
     End Property
-    Property MaTacGia() As String
+    Property NamXuatBan() As Integer
         Get
-            Return strMaTacGia
+            Return iNamXuatBan
         End Get
-        Set(ByVal value As String)
-            strMaTacGia = value
-        End Set
-    End Property
-    Property NamXuatBan() As String
-        Get
-            Return strNamXuatBan
-        End Get
-        Set(ByVal value As String)
-            strNamXuatBan = value
+        Set(ByVal value As Integer)
+            iNamXuatBan = value
         End Set
     End Property
     Property NhaXuatBan() As String

@@ -13,7 +13,7 @@ Public Class Sach_BUS
     End Sub
     Public Function isValidNamXuatBan(Sach As Sach_DTO) As Boolean
         Dim currentyear = DateTime.Now.Year
-        If (currentyear - Sach.NamXuatBan < 0 And currentyear - Sach.NamXuatBan > 8) Then
+        If (currentyear - Sach.NamXuatBan < 0 Or currentyear - Sach.NamXuatBan > 8) Then
             Return False
         End If
 
@@ -29,7 +29,7 @@ Public Class Sach_BUS
     End Function
     Public Function isValidTheLoai(Sach As Sach_DTO) As Boolean
         'Dim currentyear = DateTime.Now.Year
-        If (Sach.TheLoai > 3 And Sach.TheLoai < 1) Then
+        If (Sach.TheLoai > 3 Or Sach.TheLoai < 1) Then
             Return False
         End If
 

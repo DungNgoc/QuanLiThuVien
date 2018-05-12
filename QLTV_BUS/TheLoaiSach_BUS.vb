@@ -12,7 +12,7 @@ Public Class TheLoaiSach_BUS
     End Sub
     Public Function isValidTheLoaiSach(TheLoaiSach As TheLoaiSach_DTO) As Boolean
 
-        If (TheLoaiSach.TenTheLoai IsNot "A" And TheLoaiSach.TenTheLoai IsNot "B" And TheLoaiSach.TenTheLoai IsNot "C") Then
+        If (TheLoaiSach.TenTheLoaiSach < 1) Then
             Return False
         End If
 

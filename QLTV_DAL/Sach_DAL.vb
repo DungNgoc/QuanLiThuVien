@@ -62,8 +62,8 @@ Public Class Sach_DAL
     Public Function insert(Sach As Sach_DTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblSach] ([MaSach], [TenSach], [TheLoai], [MaTacGia], [TenTacGia],[NamXuatBan],[NhaXuatBan],[NgayNhap],[TriGia])"
-        query &= "VALUES (@MaSach,@TenSach,@TheLoai,@MaTacGia,@TenTacGia,@NamXuatBan,@NhaXuatBan,@NgayNhap,@TriGia)"
+        query &= "INSERT INTO [tblSach] ([MaSach], [TenSach], [MaTheLoaiSach], [MaTacGia],[NamXuatBan],[NhaXuatBan],[NgayNhap],[TriGia])"
+        query &= "VALUES (@MaSach,@TenSach,@MaTheLoaiSach,@MaTacGia,@NamXuatBan,@NhaXuatBan,@NgayNhap,@TriGia)"
 
         'get MSHS
         Dim nextMaSach = "1"
@@ -78,9 +78,8 @@ Public Class Sach_DAL
                     .CommandText = query
                     .Parameters.AddWithValue("@MaSach", Sach.MaSach)
                     .Parameters.AddWithValue("@TenSach", Sach.TenSach)
-                    .Parameters.AddWithValue("@Theloai", Sach.TheLoai)
-                    .Parameters.AddWithValue("@MaTacGia", Sach.MaTacGia)
-                    .Parameters.AddWithValue("@TenTacGia", Sach.TenTacGia)
+                    .Parameters.AddWithValue("@MaTheloaiSach", Sach.TheLoai)
+                    .Parameters.AddWithValue("@MaTacGia", Sach.TenTacGia)
                     .Parameters.AddWithValue("@NamXuatBan", Sach.NamXuatBan)
                     .Parameters.AddWithValue("@NhaXuatBan", Sach.NhaXuatBan)
                     .Parameters.AddWithValue("@NgayNhap", Sach.NgayNhap)
@@ -102,7 +101,7 @@ Public Class Sach_DAL
     Public Function selectALL(ByRef listSach As List(Of Sach_DTO)) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT ([MaSach], [TenSach], [TheLoai], [MaTacGia], [TenTacGia],[NamXuatBan],[NhaXuatBan],[NgayNhap],[TriGia])"
+        query &= "SELECT ([MaSach], [TenSach], [MaTheLoaiSach], [MaTacGia],[NamXuatBan],[NhaXuatBan],[NgayNhap],[TriGia])"
         query &= "FROM [tblSach]"
 
 
@@ -120,7 +119,7 @@ Public Class Sach_DAL
                     If reader.HasRows = True Then
                         listSach.Clear()
                         While reader.Read()
-                            listSach.Add(New Sach_DTO(reader("MaSach"), reader("TenSach"), reader("TheLoai"), reader("MaTacGia"), reader("TenTacGia"), reader("NamXuatBan"), reader("NhaXuatBan"), reader("NgayNhap"), reader("TriGia")))
+                            listSach.Add(New Sach_DTO(reader("MaSach"), reader("TenSach"), reader("MaTheLoaiSach"), reader("MaTacGia"), reader("NamXuatBan"), reader("NhaXuatBan"), reader("NgayNhap"), reader("TriGia")))
                         End While
                     End If
 

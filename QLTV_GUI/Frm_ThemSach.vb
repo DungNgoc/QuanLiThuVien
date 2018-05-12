@@ -13,6 +13,8 @@ Public Class Frm_ThemSach
         TheLoaiSachBUS = New TheLoaiSach_BUS()
         TacGiaBUS = New TacGia_BUS()
         ' Load LoaiHocSinh list
+
+
         Dim listTheLoaiSach = New List(Of TheLoaiSach_DTO)
         Dim result As Result
         result = TheLoaiSachBUS.selectAll(listTheLoaiSach)
@@ -23,21 +25,23 @@ Public Class Frm_ThemSach
             Return
         End If
         Cb_Theloai.DataSource = New BindingSource(listTheLoaiSach, String.Empty)
-        Cb_Theloai.DisplayMember = "TenTheLoai"
-        Cb_Theloai.ValueMember = "MaTheLoai"
+        Cb_Theloai.DisplayMember = "TenTheLoaiSach"
+        Cb_Theloai.ValueMember = "MaTheLoaiSach"
+
+
 
         Dim listTacGia = New List(Of TacGia_DTO)
-        Dim result1 As Result
-        result1 = TacGiaBUS.selectAll(listTacGia)
+        'Dim result1 As Result
+        result = TacGiaBUS.selectAll(listTacGia)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách tác giả không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
             Return
         End If
-        Cb_Theloai.DataSource = New BindingSource(listTheLoaiSach, String.Empty)
-        Cb_Theloai.DisplayMember = "TenTacGia"
-        Cb_Theloai.ValueMember = "MaTacGia"
+        Cb_TenTacGia.DataSource = New BindingSource(listTacGia, String.Empty)
+        Cb_TenTacGia.DisplayMember = "TenTacGia"
+        Cb_TenTacGia.ValueMember = "MaTacGia"
 
         'set MSSH auto
         Dim nextMaSach = "1"
@@ -61,13 +65,15 @@ Public Class Frm_ThemSach
         Sach.MaSach = Txt_MaSach.Text
         Sach.TenSach = TxtTenSach.Text
         Sach.NamXuatBan = Txt_NamXuatBan.Text
+        Sach.NhaXuatBan = Txt_NhaXuatBan.Text
         Sach.NgayNhap = Dtp_NgayNhap.Value
         Sach.TheLoai = Convert.ToInt32(Cb_Theloai.SelectedValue)
         Sach.TenTacGia = Convert.ToInt32(Cb_TenTacGia.SelectedValue)
+        Sach.TriGia = Txt_TriGia.Text
         'TacGia.TenTacGia = Sach.TenTacGia
         '2. Business .....
         If (SachBUS.isValidNamXuatBan(Sach) = False) Then
-            MessageBox.Show("Họ tên học sinh không đúng")
+            MessageBox.Show("Chi nhan sach xuat ban trong vong 8 nam")
             Txt_NamXuatBan.Focus()
             Return
         End If
